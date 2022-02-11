@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+a{
+    text-decoration: none;
+    color:inherit;
+}
+#header{
+    position:fixed;
+    height:40px;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    z-index: 20;
+}
+.header{
+    background-color: black;
+    color:white;
+    border-bottom: 1px rgb(0, 0, 0) solid;
+}
+.rev-header{
+    background-color: white;
+    color:black;
+    border-bottom: 1px rgb(146, 146, 146) solid;
+}
+.selected >*{
+    text-decoration: underline;
+}
+.tab{
+    margin: 0px 5px;
+    padding: 5px;
+}
+body{
+    margin:0px;
+    font-family: 'Roboto', sans-serif;
+}
+#revwrapper{
+    flex:1;
+}
+
+#revbutton{
+    float:right;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttonrevstate{
+    color:white;
+    background-color: black;
+    border: 1px solid white;
+}
+
+#footer{
+    width:100vw;
+    display:flex;
+    justify-content: space-between;
+}
+.rev-footer{
+    background-color: black;
+    color:white;
+    border-top: 1px rgb(0, 0, 0) solid;
+}
+.footer{
+    border-top: 1px rgb(146, 146, 146) solid;
+    background-color: white;
+}
+.content{
+    height:calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top:40px
+}
+.main{
+    flex:1;
+}
+#castwrapper{
+    display: flex;
+    flex-direction: column;
+}
+.reverse-wrapper{
+    background-color: black;
+    color:white;
+}
+.cast{
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+.cast>div{
+    flex: 1;
+}
+.castimg{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+#nicholas>.castimg{
+    background-image: url("images/nicholas.jpg");
+}
+#nathan>.castimg{
+    background-image: url("images/nicholas.jpg");
+}
+.casttext >*{
+    padding: 10px
+}
+.flex-reverse{
+    flex-direction: row-reverse;
+}
+.footertext>p{
+    padding:7px;
+}
+p{
+    margin:0px;
+}
+.main{
+    display: flex;
+}
+.half{
+    height:100%;
+    flex: 1;
+}
+.black{
+    background-color: black;
+}
+.white{
+    background-color: white;
+}
+.video{
+    width:200px;
+    height:200px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+.aboutgrid{
+    padding: 5px;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 1em;
+    column-gap: 1em;
+}
+.gridcontent{
+    border-radius: 10px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    height: 90%;
+    display: flex;
+}
+.gridimg{
+    width:40%;
+    height:100%;
+    flex-shrink:0;
+}
+.gridimg>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0px 0px 10px;
+}
+.gridtext{
+    padding: 5px;
+}
+.gridtext>h1{
+    font-size: 20px;
+}
+.gridtext>h2{
+    font-size: 14px;
+}

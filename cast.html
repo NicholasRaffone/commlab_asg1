@@ -6,33 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" async></script>
-    <title>15MFF- Home</title>
+    <title>15MFF- The Cast</title>
 </head>
 <body>
     <div class="header" id="header">
-        <div class="tab selected">
-            <p>Home</p>
+        <div class="tab">
+            <a href="index.html">Home</a>
         </div>
         <div class="tab">
             <a href="about.html">About Us</a>
         </div>
-        <div class="tab">
-            <a href="cast.html">Meet the Cast</a>
+        <div class="tab selected">
+            <p>Meet the Cast</p>
         </div>
         <div class="tab" id="revwrapper">
             <button id="revbutton">Reverse</button>
         </div>
     </div>
     <div class="content">
-
-        <div class="main">
-            <div class="half white">
-
+        <div class="main" id="castwrapper">
+            <div class="cast" id="nicholas">
+                <div class="castimg"></div>
+                <div class="casttext">
+                    <h1>Nicholas Raffone</h1>
+                    <h3>Filler Text</h3>
+                </div>
             </div>
-            <div class="half black">
-
+            <div class="cast flex-reverse reverse-wrapper" id="nathan">
+                <div class="castimg"></div>
+                <div class="casttext">
+                    <h1>Nathan Li</h1>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</h3>
+                </div>
             </div>
-        </div>
+       </div>
 
         <div class="footer" id="footer">
             <div class="footertext">
@@ -41,9 +48,6 @@
             <div class="footertext">
                 <p>Copyright 2022</p>
             </div>
-        </div>
-        <div class="video">
-
         </div>
     </div>
 </body>
