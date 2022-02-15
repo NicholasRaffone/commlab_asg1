@@ -10,6 +10,8 @@ a{
     display: flex;
     align-items: center;
     z-index: 20;
+    opacity:0;
+    transition: opacity 2s;
 }
 .header{
     background-color: black;
@@ -130,7 +132,7 @@ p{
     height:200px;
     background-color: red;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     margin-top: -100px;
     margin-left: -100px;
@@ -168,4 +170,28 @@ p{
 }
 .gridtext>h2{
     font-size: 14px;
+}
+.titletext{
+    text-align: center;
+    width: 80vw;
+    mix-blend-mode: difference;
+    color: white;
+}
+.titlewrapper{
+    position: absolute;
+    margin-top:15px;
+    left: 10%;
+}
+#cover{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    background-color: black;
+    z-index: 10;
+    opacity:1;
+    transition: all 1.3s ease-in-out 0s;
+}
+#title{
+    font-weight: bold;
+    font-size: 40px;
 }

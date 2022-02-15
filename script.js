@@ -6,6 +6,14 @@ const [left, right] = document.getElementsByClassName('half');
 const nicholas = document.getElementById('nicholas');
 const nathan = document.getElementById('nathan');
 const gridcontent = document.getElementsByClassName('gridcontent');
+const cover = document.getElementById('cover');
+const desc = document.getElementById('description')
+
+const getQuote = () =>{
+    return fetch('https://api.kanye.rest/')
+        .then(response => response.json())
+        .then(data => "\""+data.quote+"\"");
+}
 
 const revHandler = () =>{
     for(let i =0; i < gridcontent.length; i++){
@@ -60,3 +68,10 @@ const revHandler = () =>{
     }
 }
 revbutton.addEventListener('click', revHandler);
+window.addEventListener('load', ()=>{
+    window.setTimeout(()=>{header.style.opacity=1;cover.style.opacity=0;cover.style.visibility="hidden"},200);
+})
+
+window.addEventListener('load', ()=>{
+    getQuote().then((quote)=>{if(quote) desc.innerHTML=quote});
+})
