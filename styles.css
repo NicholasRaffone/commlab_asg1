@@ -70,6 +70,7 @@ body{
     background-color: white;
 }
 #inspocontent{
+    height:auto;
     min-height:calc(100vh - 40px);
 }
 .content{
