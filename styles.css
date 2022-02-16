@@ -12,6 +12,8 @@ a{
     z-index: 20;
     opacity:0;
     transition: opacity 2s;
+    transition: color 300ms;
+    transition: background-color 300ms;
 }
 .header{
     background-color: black;
@@ -43,6 +45,7 @@ body{
     border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 .buttonrevstate{
     color:white;
@@ -51,6 +54,8 @@ body{
 }
 
 #footer{
+    transition: color 300ms;
+    transition: background-color 300ms;
     width:100vw;
     display:flex;
     justify-content: space-between;
@@ -86,6 +91,8 @@ body{
     flex: 1;
     display: flex;
     overflow: hidden;
+    transition: color 300ms;
+    transition: background-color 300ms;
 }
 .cast>div{
     flex: 1;
@@ -94,13 +101,14 @@ body{
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
 }
 #nicholas>.castimg{
-    background-image: url("images/nicholas.jpg");
+    background-image: url("images/nicholas.png");
+    filter: grayscale(100%);
 }
 #nathan>.castimg{
-    background-image: url("images/nicholas.jpg");
+    background-image: url("images/nathan.png");
 }
 .casttext >*{
     padding: 10px
@@ -120,6 +128,8 @@ p{
 .half{
     height:100%;
     flex: 1;
+    transition: color 300ms;
+    transition: background-color 300ms;
 }
 .black{
     background-color: black;
@@ -128,48 +138,54 @@ p{
     background-color: white;
 }
 .video{
-    width:200px;
-    height:200px;
-    background-color: red;
     position: absolute;
-    top: 55%;
+    top: 33%;
     left: 50%;
-    margin-top: -100px;
-    margin-left: -100px;
+    margin-left: -365px;
 }
 .aboutgrid{
-    padding: 5px;
+    padding: 5px 40px 40px 40px;
+    margin-top:20px;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    row-gap: 1em;
-    column-gap: 1em;
+    row-gap: 3em;
+    column-gap: 3em;
 }
 .gridcontent{
+    border:1px solid rgb(0, 0, 0, 0.1);
     border-radius: 10px;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    height: 90%;
     display: flex;
+    flex-direction: column;
+    transition-duration: 300ms;
+}
+.gridcontent:hover{
+    transform: scale(1.05);
 }
 .gridimg{
-    width:40%;
-    height:100%;
+    margin: 20px 20px 0px 20px;
+    height: 250px;
     flex-shrink:0;
 }
 .gridimg>img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px 0px 0px 10px;
 }
 .gridtext{
-    padding: 5px;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.gridtext>*{
+    margin: 10px 5px 5px 5px;
 }
 .gridtext>h1{
-    font-size: 20px;
+    font-size: 40px;
 }
 .gridtext>h2{
-    font-size: 14px;
+    font-size: 16px;
 }
 .titletext{
     text-align: center;
@@ -187,11 +203,22 @@ p{
     height:100vh;
     position:fixed;
     background-color: black;
-    z-index: 10;
+    z-index: 30;
     opacity:1;
     transition: all 1.3s ease-in-out 0s;
 }
 #title{
     font-weight: bold;
     font-size: 40px;
+}
+.titlesection>*{
+    text-align: center;
+    padding: 0px 200px;
+}
+.inspotitle{
+    font-size: 40px;
+    font-weight: bold;
+}
+.inspodesc{
+    font-size: 20px;
 }
