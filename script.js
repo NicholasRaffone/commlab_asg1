@@ -8,6 +8,7 @@ const nathan = document.getElementById('nathan');
 const gridcontent = document.getElementsByClassName('gridcontent');
 const cover = document.getElementById('cover');
 const desc = document.getElementById('description')
+const inspoconent = document.getElementById('inspocontent')
 
 const getQuote = () =>{
     return fetch('https://api.kanye.rest/')
@@ -19,11 +20,15 @@ const revHandler = () =>{
     for(let i =0; i < gridcontent.length; i++){
         if(gridcontent[i].classList.contains('reverse-wrapper')){
             gridcontent[i].classList.remove('reverse-wrapper')
+            gridcontent[i].classList.add('reg-wrapper')
         }else{
             gridcontent[i].classList.add('reverse-wrapper')
+            gridcontent[i].classList.remove('reg-wrapper')
         }
     }
     if(!reversed){
+        inspoconent?.classList?.add('reverse-wrapper')
+
         header.classList.add("rev-header");
         header.classList.remove("header");
 
@@ -45,6 +50,8 @@ const revHandler = () =>{
 
         reversed = true;
     }else{
+        inspoconent?.classList?.remove('reverse-wrapper')
+
         header.classList.remove("rev-header");
         header.classList.add("header");
 
@@ -73,5 +80,5 @@ window.addEventListener('load', ()=>{
 })
 
 window.addEventListener('load', ()=>{
-    getQuote().then((quote)=>{if(quote) desc.innerHTML=quote});
+    getQuote().then((quote)=>{if(quote&&desc) desc.innerHTML=quote});
 })
